@@ -159,6 +159,4 @@ $(BUILD_DIR):
 clean:
 	@rm -rf $(BUILD_DIR) $(FAT_LIBS_DIST)
 
-dist: framework
-
-lib: $(FAT_LIBS_DIST) $(ARCH_HEADERS)
+dist: $(FAT_LIBS_DIST) $(ARCH_HEADERS)

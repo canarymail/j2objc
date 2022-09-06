@@ -53,10 +53,12 @@ include $(J2OBJC_ROOT)/make/framework.mk
 JSR330_LICENSE = LICENSE
 JSR330_LICENSE_DIST = $(DIST_LICENSE_DIR)/jsr330_license.txt
 
-default: $(FAT_LIBS)
-	@:
+default: lib
 
 java: jar
+
+lib: $(FAT_LIBS)
+	@:
 
 $(BUILD_DIR)/.extracted: $(INJECT_SRC_JAR) | $(BUILD_DIR)
 	@mkdir -p $(JAVA_SRC_DIR)
@@ -101,6 +103,4 @@ clean:
 	@rm -rf $(ARCH_INCLUDE_DIR)/javax/inject
 	@rm -rf $(FRAMEWORK_DIR)
 
-dist: framework
-
-lib: $(FAT_LIBS_DIST) $(ARCH_HEADERS) $(JSR330_LICENSE_DIST)
+dist: $(FAT_LIBS_DIST) $(ARCH_HEADERS) $(JSR330_LICENSE_DIST)

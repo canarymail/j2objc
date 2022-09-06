@@ -137,6 +137,4 @@ clean:
 	@rm -rf $(JSR305_LICENSE_DIST) $(ARCH_INCLUDE_DIR)/javax/annotation
 	@rm -rf $(FRAMEWORK_DIR)
 
-dist: framework
-
-lib: $(FAT_LIBS_DIST) $(ARCH_HEADERS) $(JSR305_LICENSE_DIST)
+dist: $(FAT_LIBS_DIST) $(ARCH_HEADERS) $(JSR305_LICENSE_DIST)

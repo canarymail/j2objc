@@ -189,9 +189,7 @@ clean:
 	@rm -rf $(FRAMEWORK_DIR)
 	@$(MAKE) -f java.mk clean
 
-dist: framework
-
-lib: jre_emul_jars_dist libs_dist $(DIST_DIR)/j2objcc licenses
+dist: jre_emul_jars_dist libs_dist $(DIST_DIR)/j2objcc licenses
 
 jars_dist: jre_emul_jars_dist
 
